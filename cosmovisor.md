@@ -5,13 +5,13 @@ curl -s https://get.nibiru.fi/@v0.21.9! | bash
 nibid version
 
 
-# Prepare binaries for Cosmovisor
-mkdir -p $HOME/.nibid/cosmovisor/genesis/bin
-mv /usr/local/bin/nibid $HOME/.nibid/cosmovisor/genesis/bin/
+export DAEMON_NAME=nibid
+export DAEMON_HOME=$HOME/.nibid
 
-# Create application symlinks
-sudo ln -s $HOME/.nibid/cosmovisor/genesis $HOME/.nibid/cosmovisor/current -f
-sudo ln -s $HOME/.nibid/cosmovisor/current/bin/nibid /usr/local/bin/nibid -f
+mkdir -p $DAEMON_HOME/cosmovisor/genesis/bin
+mkdir -p $DAEMON_HOME/cosmovisor/upgrades
+
+cp $(which nibid) $DAEMON_HOME/cosmovisor/genesis/bin
 
 
 # Download and install Cosmovisor
