@@ -60,8 +60,8 @@ curl -s https://networks.itn2.nibiru.fi/$NETWORK/genesis > $HOME/.nibid/config/g
 ### Seed ve Peerleri Giriyoruz
 
 ~~~bash
-NETWORK=nibiru-itn-2
-curl -s https://networks.itn2.nibiru.fi/$NETWORK/genesis > $HOME/.nibid/config/genesis.json
+SEEDS="142142567b8a8ec79075ff3729e8e5b9eb2debb7@35.195.230.189:26656,766ca434a82fe30158845571130ee7106d52d0c2@34.140.226.56:26656"
+sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|' $HOME/.nibid/config/config.toml
 ~~~
 
 
