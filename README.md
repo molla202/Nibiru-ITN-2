@@ -5,7 +5,7 @@
 
 
 Explorer:
->-  https://explorer.secardnode.com/nibiru
+>-  https://explorer.nibiru.fi/nibiru-itn-2/uptime
 
 
 ## Sistem Gereksinimleri
