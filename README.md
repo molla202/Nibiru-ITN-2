@@ -46,6 +46,7 @@ curl -s https://get.nibiru.fi/@v0.21.9! | bash
 nibid version
 ~~~
 ### init işlemi 
+NOT: moniker adı yazınız
 ```
 nibid init <moniker-name> --chain-id=nibiru-itn-2 --home $HOME/.nibid
 ```
