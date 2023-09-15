@@ -75,7 +75,7 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable nibid
 ```
-Initialize the node
+
 # Set node configuration
 ```
 nibid config chain-id nibiru-itn-2
@@ -86,7 +86,7 @@ nibid config node tcp://localhost:13957
 ```
 nibid init $MONIKER --chain-id nibiru-itn-2
 ```
-v
+```
 # Download genesis and addrbook
 NETWORK=nibiru-itn-2
 curl -s https://networks.itn2.nibiru.fi/$NETWORK/genesis > $HOME/.nibid/config/genesis.json
@@ -107,8 +107,9 @@ sed -i \
   -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
   $HOME/.nibid/config/app.toml
-
+```
 # Set custom ports
+```
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:13958\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:13957\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:13960\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:13956\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":13966\"%" $HOME/.nibid/config/config.toml
 sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:13917\"%; s%^address = \":8080\"%address = \":13980\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:13990\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:13991\"%; s%:8545%:13945%; s%:8546%:13946%; s%:6065%:13965%" $HOME/.nibid/config/app.toml
 ```
