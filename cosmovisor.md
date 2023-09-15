@@ -83,6 +83,7 @@ nibid config keyring-backend test
 nibid config node tcp://localhost:13957
 ```
 # Initialize the node
+Not: change moniker name
 ```
 nibid init $MONIKER --chain-id nibiru-itn-2
 ```
