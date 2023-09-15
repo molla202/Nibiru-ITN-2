@@ -1,3 +1,6 @@
+![image](https://github.com/molla202/Nibiru-ITN-2/assets/91562185/2c827e9b-ea63-45d8-bf5f-6d5756eb44d1)
+
+
 ## Sistem Gereksinimleri
 ### Minimum Sistem Gereksinimler
  - 4x CPUs
