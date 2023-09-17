@@ -41,7 +41,12 @@ go version
 // Binnary Dosyasını İndirip Build Ediyoruz
 
 ~~~bash
-curl -s https://get.nibiru.fi/@v0.21.9! | bash
+cd $HOME
+rm -rf nibiru
+git clone https://github.com/NibiruChain/nibiru.git
+cd nibiru
+git checkout v0.21.9
+make install
 ~~~
 
 /// Yükledikten Sonra v0.21.9 olduğunu aşağıdaki kodu yazarak onaylayalım
