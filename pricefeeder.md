@@ -5,6 +5,7 @@ cd pricefeeder
 make install
 ```
 ## export
+NOT: write valoper and mnemonic
 ```
 export CHAIN_ID="nibiru-itn-2"
 export GRPC_ENDPOINT="localhost:9090"
