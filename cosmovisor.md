@@ -32,7 +32,12 @@ go version
 ~~~
 # Clone project repository
 ```
-curl -s https://get.nibiru.fi/@v0.21.9! | bash
+cd $HOME
+rm -rf nibiru
+git clone https://github.com/NibiruChain/nibiru.git
+cd nibiru
+git checkout v0.21.9
+make install
 ```
 ```
 nibid version
