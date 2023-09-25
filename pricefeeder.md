@@ -25,7 +25,7 @@ After=network-online.target
 [Service]
 Type=exec
 User=root
-ExecStart=/root/go/bin/feeder
+ExecStart=/usr/local/bin/pricefeeder
 Restart=on-failure
 ExecReload=/bin/kill -HUP $MAINPID
 KillSignal=SIGTERM
